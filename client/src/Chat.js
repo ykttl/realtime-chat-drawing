@@ -1,6 +1,7 @@
 import React from "react";
 import SocketIOClient from "socket.io-client";
-const socket = SocketIOClient("http://localhost:5000");
+//const socket = SocketIOClient("http://localhost:5000");
+const socket = SocketIOClient("https://chat-and-canvas.herokuapp.com/");
 
 class Chat extends React.Component {
   state = { messages: [], newMessage: "" };
