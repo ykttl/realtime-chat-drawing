@@ -11,6 +11,37 @@ h1 {
   display: flex;
   justify-content: center;
 }
+/********* Username ********/
+.username {
+  text-align: center;
+  margin-bottom: 0;
+}
+.username-box {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.username-input {
+  font-size: 16px;
+  border: solid 3px;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+.username-btn {
+  margin: 30px;
+  padding: 10px;
+  font-size: 20px;
+  background: yellow;
+  border: orange solid 1px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.username-btn:focus {
+  outline: none;
+}
 
 /********* Chat ********/
 .chat-box {

@@ -5,6 +5,7 @@ const io = require("socket.io")(server);
 
 io.on("connection", socket => {
   console.log("new connection", socket.id);
+  // socket.emit("new", socket.id);
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
@@ -18,8 +19,8 @@ io.on("connection", socket => {
     socket.broadcast.emit("canvas", data);
   });
 
-  socket.on("chat", msg => {
-    io.emit("chat", msg);
+  socket.on("chat", data => {
+    io.emit("chat", data);
   });
 });
 
