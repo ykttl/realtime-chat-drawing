@@ -31,7 +31,7 @@ class Canvas extends React.Component {
     });
     socket.on("clearCanvas", () => {
       const ctx = canvas.getContext("2d");
-      ctx.clearRect(0, 0, 400, 500);
+      ctx.clearRect(0, 0, 500, 500);
     });
   }
   draw = (x0, y0, x1, y1, isDrawing, color) => {
