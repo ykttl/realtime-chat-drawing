@@ -5,41 +5,43 @@ const socket = SocketIOClient("http://localhost:5000");
 class Chat extends React.Component {
   state = { messages: [], newMessage: "" };
   componentDidMount() {
-    socket.on("msg", msg => {
-      let history = this.state.messages;
+    socket.on("chat", msg => {
+      const history = this.state.messages;
       history.push(msg);
       this.setState({ messages: history });
     });
   }
-
   typeMsg = e => {
     const msg = e.target.value;
     this.setState({ newMessage: msg });
   };
   submitMsg = () => {
     const msg = this.state.newMessage;
-    socket.emit("msg", msg);
+    socket.emit("chat", msg);
     this.setState({ newMessage: "" });
   };
-  componentDidUpdate() {
-    console.log(this.state);
-  }
+  onKeyPress = e => {
+    if (e.which === 13) {
+      this.submitMsg();
+    }
+  };
   render() {
     return (
-      <div style={{ background: "yellow" }}>
-        <h1>CHAT</h1>
-        <div style={{ position: "fixed", bottom: 0, width: "40%" }}>
+      <div>
+        <h1>Chat</h1>
+        <div className="chat-area">
           <input
             type="text"
             onChange={this.typeMsg}
+            onKeyPress={this.onKeyPress}
             value={this.state.newMessage}
-            style={{ width: "80%", border: "solid 6px" }}
+            className="chat-input"
+            placeholder="type and press Enter"
           />
-          <button onClick={this.submitMsg}>submit</button>
-        </div>
-
-        <div>
-          {this.state.messages && this.state.messages.map(msg => <p>{msg}</p>)}
+          <div className="chat-display">
+            {this.state.messages &&
+              this.state.messages.map(msg => <p>{msg}</p>)}
+          </div>
         </div>
       </div>
     );

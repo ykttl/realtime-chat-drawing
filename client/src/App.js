@@ -1,16 +1,16 @@
 import React from "react";
 import Chat from "./Chat";
-import Doodle from "./Doodle";
+import Canvas from "./Canvas";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="pure-g">
-        <div className="pure-u-2-5">
-          <Chat />
+      <div className="container">
+        <div className="canvas-box">
+          <Canvas />
         </div>
-        <div className="pure-u-3-5">
-          <Doodle />
+        <div className="chat-box">
+          <Chat />
         </div>
       </div>
     );

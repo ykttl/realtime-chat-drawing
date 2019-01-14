@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Hammersmith+One");
+
+body {
+  font-family: "Hammersmith One", sans-serif;
+}
+h1 {
+  margin: 10px;
+  font-family: "Hammersmith One", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/********* Chat ********/
+.chat-box {
+  margin: 10px;
+  width: 200px;
+}
+.canvas-box {
+  margin: 10px;
+}
+.chat-area {
+  position: relative;
+  border: dashed 1px;
+}
+.chat-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  margin: 0px;
+  border: solid 3px;
+}
+.chat-display {
+  height: 400px;
+  overflow-y: auto;
+  word-break: break-all;
+}
+
+/********* Canvas ********/
+.canvas-area {
+  position: relative;
+}
+.color-picker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+.clear-btn {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: skyblue;
+  cursor: pointer;
+}
+.clear-btn:focus {
+  outline: none;
+}
+
+#canvas {
+  border: dashed 1px;
+  /* width:400px; height:400px */
+  /* width and height are set up inside react.js */
+  /* to avoid breaking aspect ration of html canvas */
+}
