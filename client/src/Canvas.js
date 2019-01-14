@@ -14,8 +14,8 @@ class Canvas extends React.Component {
   };
   componentDidMount() {
     const canvas = document.getElementById("canvas");
-    canvas.width = 400;
-    canvas.height = 400;
+    canvas.width = 500;
+    canvas.height = 500;
 
     socket.on("canvas", data => {
       if (this.state.clear === false) {
