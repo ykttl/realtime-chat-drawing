@@ -28,7 +28,7 @@ class App extends React.Component {
       <div>
         {!this.state.enter ? (
           <div className="username-box">
-            <h2>What's your name?</h2>
+            <h2>What is your name?</h2>
             {this.state.error && <p>Please enter username :p</p>}
             <input
               type="text"

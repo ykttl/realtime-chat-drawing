@@ -5,7 +5,6 @@ const io = require("socket.io")(server);
 
 io.on("connection", socket => {
   console.log("new connection", socket.id);
-  // socket.emit("new", socket.id);
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
