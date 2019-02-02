@@ -4,7 +4,7 @@ import SocketIOClient from "socket.io-client";
 const socket = SocketIOClient("https://chat-and-canvas.herokuapp.com/");
 
 class Chat extends React.Component {
-  state = { messages: [], newMessage: "", id: "" };
+  state = { messages: [], newMessage: "" };
   constructor(props) {
     super(props);
   }

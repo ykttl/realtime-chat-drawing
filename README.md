@@ -2,4 +2,6 @@
 
 DEMO: https://chat-and-canvas.herokuapp.com/
 
-React, Express, Socket.io
+<img src="./screenshot.gif">
+
+Made with HTML Canvas, React, Express, Socket.io
